@@ -35,7 +35,7 @@
       };
     },
     created() {
-      axios.get('http://localhost:3000/alunos').then(response => {
+      axios.get('http://apiwebsenac4.azurewebsites.net').then(response => {
         //console.log(response.data);
         this.alunos = response.data;
       });
