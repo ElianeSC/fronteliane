@@ -44,7 +44,7 @@
     methods: {
       submitForm() {        
         const codigoaluno = this.$route.params.codigoaluno;
-        axios.put(`http://localhost:3000/alunos/${codigoaluno}`, this.aluno).then(() => {
+        axios.put(`'https://apiperguntaseliane.azurewebsites.net/alunos/${codigoaluno}`, this.aluno).then(() => {
           this.$router.push({ name: 'alunos' });
         });
       }
