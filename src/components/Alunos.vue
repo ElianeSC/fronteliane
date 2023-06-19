@@ -35,16 +35,16 @@
       };
     },
     created() {
-      axios.get('http://apiwebsenac4.azurewebsites.net').then(response => {
+      axios.get('https://apiperguntaseliane.azurewebsites.net//alunos').then(response => {
         //console.log(response.data);
         this.alunos = response.data;
       });
     },
     methods: {  
       deleteAluno(codigoaluno) { 
-        axios.get('http://localhost:3000/matriculasPorAluno/'+codigoaluno).then(response => {
+        axios.get('https://apiperguntaseliane.azurewebsites.net//matriculasPorAluno/'+codigoaluno).then(response => {
           if ( response.data.length == 0 ) {
-            axios.delete('http://localhost:3000/alunos/'+codigoaluno).then(() => {
+            axios.delete('https://apiperguntaseliane.azurewebsites.net/alunos/'+codigoaluno).then(() => {
               // Atualiza a lista de alunos
               this.alunos = this.alunos.filter(aluno => aluno.codigoaluno !== codigoaluno);
             });  
