@@ -44,7 +44,7 @@
           telefone: this.aluno.telefone,
           endereco: this.aluno.endereco,
         };
-         axios.post('https://apiperguntaseliane.azurewebsites.net//alunos').then(() => {
+         axios.post('apiwebsenac4.azurewebsites.net/alunos').then(() => {
           // Redireciona para a página de listagem de alunos
           this.$router.push({ name: 'alunos' });
         });
