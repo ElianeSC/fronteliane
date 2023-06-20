@@ -70,7 +70,7 @@
           valor: this.curso.valor,
         };
         console.log(curso);  
-         axios.post('https://apiperguntaseliane.azurewebsites.net/cursos', curso).then(() => {
+         axios.post('https://apiwebsenac4.azurewebsites.net/cursos', curso).then(() => {
           // Redireciona para a página de listagem de alunos
           this.$router.push({ name: 'cursos' });
         });
