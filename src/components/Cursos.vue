@@ -35,15 +35,15 @@
       };
     },
     created() {
-      axios.get('https://apiperguntaseliane.azurewebsites.net/cursos').then(response => {
+      axios.get('https://apiwebsenac4.azurewebsites.net/cursos').then(response => {
         this.cursos = response.data;
       });
     },
     methods: { 
       deleteCurso(codigocurso) { 
-        axios.get('apiwebsenac4.azurewebsites.net/alunosPorCurso/'+codigocurso).then(response => {
+        axios.get('https://apiwebsenac4.azurewebsites.net/alunosPorCurso/'+codigocurso).then(response => {
           if ( response.data.length == 0 ) {
-            axios.delete(''https://apiperguntaseliane.azurewebsites.net/cursos/'+codigocurso).then(() => {
+            axios.delete(''https://apiwebsenac4.azurewebsites.net/cursos/'+codigocurso).then(() => {
             // Atualiza a lista de cursos
             this.cursos = this.cursos.filter(curso => curso.codigocurso !== codigocurso);
           }); 
