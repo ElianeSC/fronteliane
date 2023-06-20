@@ -55,7 +55,7 @@
   
       },
       deleteMatricula(codigomatricula) { 
-        axios.delete('https://apiwebsenac4.azurewebsites.net/matriculas/'+codigomatricula).then(() => {
+        axios.delete('https://apiwebsenac4.azurewebsites.net/matriculas/'+codigomatricula').then(() => {
             // Atualiza a lista de alunos
             this.cursos = this.cursos.filter(curso => curso.codigomatricula !== codigomatricula);
         });                    
