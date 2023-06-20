@@ -39,7 +39,7 @@
     },
     created() {
       const codigoaluno = this.$route.params.codigoaluno;
-      axios.get(`'https://apiperguntaseliane.azurewebsites.net//matriculasPorAluno/${codigoaluno}`).then(response => {
+      axios.get('apiwebsenac4.azurewebsites.net/matriculasPorAluno/${codigoaluno}`).then(response => {
         this.cursos = response.data;
       });
       axios.get('https://apiperguntaseliane.azurewebsites.net/alunos/${codigoaluno}`).then(response2 => {
@@ -55,7 +55,7 @@
   
       },
       deleteMatricula(codigomatricula) { 
-        axios.delete('https://apiperguntaseliane.azurewebsites.net/matriculas/'+codigomatricula).then(() => {
+        axios.delete(apiwebsenac4.azurewebsites.net/matriculas/'+codigomatricula).then(() => {
             // Atualiza a lista de alunos
             this.cursos = this.cursos.filter(curso => curso.codigomatricula !== codigomatricula);
         });                    
