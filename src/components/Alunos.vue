@@ -44,7 +44,7 @@
       deleteAluno(codigoaluno) { 
         axios.get('https://apiwebsenac4.azurewebsites.net/matriculasPorAluno/'+codigoaluno').then(response => {
           if ( response.data.length == 0 ) {
-            axios.delete('apiwebsenac4.azurewebsites.netalunos/'+codigoaluno').then(() => {
+            axios.delete('https://apiwebsenac4.azurewebsites.netalunos/'+codigoaluno').then(() => {
               // Atualiza a lista de alunos
               this.alunos = this.alunos.filter(aluno => aluno.codigoaluno !== codigoaluno);
             });  
