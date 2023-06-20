@@ -35,7 +35,7 @@
     created() {
       const codigoaluno = this.$route.params.codigoaluno;
       
-      axios.get('apiwebsenac4.azurewebsites.net'${codigoaluno}`).then(response => {
+      axios.get('apiwebsenac4.azurewebsites.net/alunos/'${codigoaluno}`).then(response => {
         this.aluno.nome = response.data[0].nome;
         this.aluno.endereco = response.data[0].endereco;
         this.aluno.telefone = response.data[0].telefone;
@@ -44,7 +44,7 @@
     methods: {
       submitForm() {        
         const codigoaluno = this.$route.params.codigoaluno;
-        axios.put(`'https://apiperguntaseliane.azurewebsites.net/alunos/${codigoaluno}`, this.aluno).then(() => {
+        axios.put('apiwebsenac4.azurewebsites.net/alunos/${codigoaluno}`, this.aluno).then(() => {
           this.$router.push({ name: 'alunos' });
         });
       }
