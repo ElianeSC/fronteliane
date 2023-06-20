@@ -42,12 +42,12 @@
     },
     methods: {
       carregarAlunos() {
-        axios.get('https://apiperguntaseliane.azurewebsites.net/alunos').then((response) => {
+        axios.get('https://apiwebsenac4.azurewebsites.net/alunos').then((response) => {
           this.alunos = response.data;
         });
       },
       carregarCursos() {
-        axios.get('https://apiperguntaseliane.azurewebsites.net/cursos').then((response) => {
+        axios.get('https://apiwebsenac4.azurewebsites.net/cursos').then((response) => {
           this.cursos = response.data;
         });
       },
@@ -59,7 +59,7 @@
   
         //console.log(produto);
         
-         axios.post('https://apiperguntaseliane.azurewebsites.net/matriculas', matricula).then(() => {
+         axios.post('https://apiwebsenac4.azurewebsites.net/matriculas', matricula).then(() => {
           // Redireciona para a página de listagem de tipos de produto
           alert('Matrícula realizada com sucesso!');
           // Limpar Campos
