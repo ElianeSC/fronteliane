@@ -41,7 +41,7 @@
     },
     methods: { 
       deleteCurso(codigocurso) { 
-        axios.get('https://apiperguntaseliane.azurewebsites.net/alunosPorCurso/'+codigocurso).then(response => {
+        axios.get('apiwebsenac4.azurewebsites.net/alunosPorCurso/'+codigocurso).then(response => {
           if ( response.data.length == 0 ) {
             axios.delete(''https://apiperguntaseliane.azurewebsites.net/cursos/'+codigocurso).then(() => {
             // Atualiza a lista de cursos
